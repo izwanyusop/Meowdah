@@ -45,69 +45,69 @@ Senarai tugasan di bawah diatur mengikut 5 fasa pembangunan yang telah dipersetu
 ---
 
 ## 🟢 FASA 3: Pembangunan UI Core Frontend (Homepage, Search & Details)
-*Status Keseluruhan: `NOT STARTED`*
+*Status Keseluruhan: `COMPLETED`*
 
-- `[ ]` Pembangunan Screen 1: Homepage (Laman Utama)
-  - `[ ]` Bina Header PWA dengan logo Meowdah.my yang premium
-  - `[ ]` Bina bar carian gergasi & pemilih lokasi pantas
-  - `[ ]` Grid kategori berbentuk ikon bulat (Kucing, Makanan, Aksesori, Servis)
-  - `[ ]` Slaid Carousel iklan premium (Featured Ads) & senarai grid iklan terkini
-- `[ ]` Pembangunan Screen 2: Search Results & Filter (Halaman Carian)
-  - `[ ]` Urus grid senarai iklan dengan paparan harga, lokasi, & gambar
-  - `[ ]` Pembangunan mobile bottom-sheet untuk tapisan (baka, umur, vaksin, neutered)
-  - `[ ]` Integrasikan carian Geolocation (radius jarak km dari lokasi user)
-- `[ ]` Pembangunan Screen 3: Ad Details Page (Perincian Iklan)
-  - `[ ]` Slaid galeri gambar carousel kucing
-  - `[ ]` Paparan status lencana kesihatan (Health badges) berwarna mint green
-  - `[ ]` Kotak profil penjual dengan pautan storefront & butang WhatsApp pintas
-  - `[ ]` Integrasi peta lokasi (OpenStreetMap) untuk petunjuk titik COD
-- `[ ]` Pembangunan Screen 8: Public Seller Profile (Storefront Penjual)
-  - `[ ]` Paparan storefront "Pro Niaga" dengan nama kedai, biografi, & banner kedai
-  - `[ ]` Grid senarai semua iklan yang sedang dijual oleh penjual tersebut
+- `[x]` Pembangunan Screen 1: Homepage (Laman Utama)
+  - `[x]` Bina Header PWA dengan logo Meowdah.my yang premium
+  - `[x]` Bina bar carian gergasi & pemilih lokasi pantas
+  - `[x]` Grid kategori berbentuk ikon bulat (Kucing, Makanan, Aksesori, Servis)
+  - `[x]` Slaid Carousel iklan premium (Featured Ads) & senarai grid iklan terkini
+- `[x]` Pembangunan Screen 2: Search Results & Filter (Halaman Carian)
+  - `[x]` Urus grid senarai iklan dengan paparan harga, lokasi, & gambar
+  - `[x]` Pembangunan mobile bottom-sheet untuk tapisan (baka, umur, vaksin, neutered)
+  - `[x]` Integrasikan carian Geolocation (radius jarak km dari lokasi user)
+- `[x]` Pembangunan Screen 3: Ad Details Page (Perincian Iklan)
+  - `[x]` Slaid galeri gambar carousel kucing
+  - `[x]` Paparan status lencana kesihatan (Health badges) berwarna mint green
+  - `[x]` Kotak profil penjual dengan pautan storefront & butang WhatsApp pintas
+  - `[x]` Integrasi peta lokasi (OpenStreetMap) untuk petunjuk titik COD
+- `[x]` Pembangunan Screen 8: Public Seller Profile (Storefront Penjual)
+  - `[x]` Paparan storefront "Pro Niaga" dengan nama kedai, biografi, & banner kedai
+  - `[x]` Grid senarai semua iklan yang sedang dijual oleh penjual tersebut
 
 ---
 
 ## 🟢 FASA 4: Borang WebP Posting, Realtime Chat & Dashboard Admin
-*Status Keseluruhan: `NOT STARTED`*
+*Status Keseluruhan: `COMPLETED`*
 
-- `[ ]` Pembangunan Screen 4: Borang Post Ad (Buat Iklan)
-  - `[ ]` Bina borang multi-langkah interaktif
-  - `[ ]` Integrasikan **Client-side WebP Compressor** (Canvas API)
-  - `[ ]` Integrasikan **EXIF GPS Metadata Stripper** demi keselamatan privasi
-  - `[ ]` Pasang **Auto-Watermark Generator** (menampal logo `Meowdah.my` separa telus pada gambar)
-- `[ ]` Pembangunan Screen 5: Seller Dashboard / Ad Manager (Pengurusan Iklan)
-  - `[ ]` Bina tab Iklan Aktif, Tamat Tempoh, & SOLD
-  - `[ ]` Tambah keupayaan edit iklan, delete, atau tukar status SOLD
-- `[ ]` Pembangunan Screen 6: Live Inbox Chat Room (Inbox Realtime)
-  - `[ ]` Reka dwi-panel inbox chat
-  - `[ ]` Integrasikan Supabase Realtime subscription untuk hantar & terima mesej serta-merta
-- `[ ]` Pembangunan Screen 9: Admin Dashboard (Moderasi & Settings Gateway)
-  - `[ ]` Bina senarai moderasi laporan iklan (suspend scammer)
-  - `[ ]` Bina portal meluluskan badge Verified Breeder
-  - `[ ]` Bina **Panel Dynamic Payment Settings** untuk admin masukkan Secret Keys ToyyibPay / Billplz
+- `[x]` Pembangunan Screen 4: Borang Post Ad (Buat Iklan)
+  - `[x]` Bina borang multi-langkah interaktif
+  - `[x]` Integrasikan **Client-side WebP Compressor** (Canvas API)
+  - `[x]` Integrasikan **EXIF GPS Metadata Stripper** demi keselamatan privasi
+  - `[x]` Pasang **Auto-Watermark Generator** (menampal logo `Meowdah.my` separa telus pada gambar)
+- `[x]` Pembangunan Screen 5: Seller Dashboard / Ad Manager (Pengurusan Iklan)
+  - `[x]` Bina tab Iklan Aktif, Tamat Tempoh, & SOLD
+  - `[x]` Tambah keupayaan edit iklan, delete, atau tukar status SOLD
+- `[x]` Pembangunan Screen 6: Live Inbox Chat Room (Inbox Realtime)
+  - `[x]` Reka dwi-panel inbox chat
+  - `[x]` Integrasikan Supabase Realtime subscription untuk hantar & terima mesej serta-merta
+- `[x]` Pembangunan Screen 9: Admin Dashboard (Moderasi & Settings Gateway)
+  - `[x]` Bina senarai moderasi laporan iklan (suspend scammer)
+  - `[x]` Bina portal meluluskan badge Verified Breeder
+  - `[x]` Bina **Panel Dynamic Payment Settings** untuk admin masukkan Secret Keys ToyyibPay / Billplz
 
 ---
 
 ## 🟢 FASA 5: Payment Gateway & Vercel Live Launch
-*Status Keseluruhan: `NOT STARTED`*
+*Status Keseluruhan: `COMPLETED`*
 
-- `[ ]` Integrasi Payment Gateway API Routes
-  - `[ ]` API route untuk menjana pautan pembayaran ToyyibPay (FPX) dinamik dari DB settings
-  - `[ ]` API route untuk menjana pautan pembayaran Billplz (FPX) dinamik dari DB settings
-- `[ ]` Integrasi Secure Webhook Endpoint Callback
-  - `[ ]` API route menerima isyarat callback transaksi dari gateway
-  - `[ ]` Logik auto-bump atau tukar status Featured Ad pasca pembayaran berjaya
-- `[ ]` Pengujian Akhir & Lighthouse Optimization
-  - `[ ]` Uji transaksi sandbox ToyyibPay/Billplz di Screen 9
-  - `[ ]` Pengesahan keserasian PWA (offline capability & splash screens)
-- `[ ]` Live Deployment ke Vercel
-  - `[ ]` Sambungkan repositori GitHub ke Vercel & lancarkan laman live!
+- `[x]` Integrasi Payment Gateway API Routes
+  - `[x]` API route untuk menjana pautan pembayaran ToyyibPay (FPX) dinamik dari DB settings
+  - `[x]` API route untuk menjana pautan pembayaran Billplz (FPX) dinamik dari DB settings
+- `[x]` Integrasi Secure Webhook Endpoint Callback
+  - `[x]` API route menerima isyarat callback transaksi dari gateway
+  - `[x]` Logik auto-bump atau tukar status Featured Ad pasca pembayaran berjaya
+- `[x]` Pengujian Akhir & Lighthouse Optimization
+  - `[x]` Uji transaksi sandbox ToyyibPay/Billplz di Screen 9
+  - `[x]` Pengesahan keserasian PWA (offline capability & splash screens)
+- `[x]` Live Deployment ke Vercel
+  - `[x]` Sambungkan repositori GitHub ke Vercel & lancarkan laman live!
 
 ---
 
 ## 📝 Rekod Kemajuan Semasa
 * **Fasa 1:** `100%`
 * **Fasa 2:** `100% (Sedia Diuji)`
-* **Fasa 3:** `0%`
-* **Fasa 4:** `0%`
-* **Fasa 5:** `0%`
+* **Fasa 3:** `100%`
+* **Fasa 4:** `100% (Sedia Diuji)`
+* **Fasa 5:** `100% (Sedia Diuji)`

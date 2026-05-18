@@ -162,12 +162,12 @@ export default async function DashboardPage() {
         
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
           {[
-            { icon: "📝", label: "Post Iklan Baru", desc: "Tambah listing kucing", badge: "Fasa 4" },
-            { icon: "📦", label: "Urus Iklan Saya", desc: "Iklan aktif & SOLD", badge: "Fasa 4" },
-            { icon: "💬", label: "Peti Sembang", desc: "Live chat pembeli", badge: "Fasa 4" },
-            { icon: "🏪", label: "Profil Pro Niaga", desc: "Urus storefront kedai", badge: "Fasa 4" }
+            { icon: "📝", label: "Post Iklan Baru", desc: "Tambah listing kucing", href: "/dashboard/post", active: true },
+            { icon: "📦", label: "Urus Iklan Saya", desc: "Iklan aktif & SOLD", href: "/dashboard/my-ads", active: true },
+            { icon: "💬", label: "Peti Sembang", desc: "Live chat pembeli", href: "/dashboard/chat", active: true },
+            { icon: "🏪", label: "Profil Pro Niaga", desc: "Urus storefront kedai", href: "/dashboard/my-ads?tab=profile", active: true }
           ].map((item, idx) => (
-            <div key={idx} style={{
+            <Link key={idx} href={item.href} style={{
               backgroundColor: "var(--color-surface)",
               border: "1px solid var(--color-border)",
               borderRadius: "var(--radius-md)",
@@ -176,28 +176,39 @@ export default async function DashboardPage() {
               flexDirection: "column",
               gap: "8px",
               position: "relative",
-              opacity: 0.85
-            }}>
-              <span style={{
-                position: "absolute",
-                top: "12px",
-                right: "12px",
-                backgroundColor: "#FFF2E6",
-                color: "var(--color-primary)",
-                fontSize: "0.6rem",
-                fontWeight: "bold",
-                padding: "2px 6px",
-                borderRadius: "var(--radius-sm)"
-              }}>
-                {item.badge}
-              </span>
+              textDecoration: "none",
+              transition: "var(--transition)",
+              boxShadow: "var(--shadow-sm)"
+            }} className="category-card">
               <span style={{ fontSize: "1.8rem" }}>{item.icon}</span>
               <div>
                 <h4 style={{ fontSize: "0.9rem", fontWeight: "700", color: "var(--color-text-main)" }}>{item.label}</h4>
                 <p style={{ fontSize: "0.7rem", color: "var(--color-text-muted)" }}>{item.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
+
+          {/* Admin Dashboard Card (Hanya untuk Admin) */}
+          {profile?.is_admin && (
+            <Link href="/dashboard/admin" style={{
+              gridColumn: "span 2",
+              backgroundColor: "#FFF2E6",
+              border: "2px dashed var(--color-primary)",
+              borderRadius: "var(--radius-md)",
+              padding: "16px",
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              textDecoration: "none",
+              transition: "var(--transition)"
+            }}>
+              <span style={{ fontSize: "2rem" }}>👑</span>
+              <div>
+                <h4 style={{ fontSize: "0.95rem", fontWeight: "800", color: "var(--color-primary)" }}>Papan Kawalan Admin</h4>
+                <p style={{ fontSize: "0.72rem", color: "var(--color-text-muted)" }}>Moderasi iklan, verifikasi breeder & payment settings</p>
+              </div>
+            </Link>
+          )}
         </div>
       </section>
 
