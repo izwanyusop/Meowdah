@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "@/utils/supabase/server";
+import SafeImage from "@/components/SafeImage";
 
 export const revalidate = 0; // Pastikan data sentiasa dikemas kini
 
@@ -411,14 +412,10 @@ export default async function Home() {
 
                 {/* Ad Image with Gradient Cover */}
                 <Link href={`/ads/${ad.id}`} style={{ display: "block", position: "relative", height: "160px", backgroundColor: "#FFEAD7", overflow: "hidden" }}>
-                  <img 
+                  <SafeImage 
                     src={imageSrc} 
                     alt={ad.title}
                     style={{ width: "100%", height: "100%", objectFit: "cover", transition: "var(--transition)" }}
-                    onError={(e) => {
-                      // Fallback if image fails to load
-                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600";
-                    }}
                   />
                   <div style={{
                     position: "absolute",
@@ -561,13 +558,10 @@ export default async function Home() {
                 )}
 
                 <Link href={`/ads/${ad.id}`} style={{ display: "block", position: "relative", height: "120px", backgroundColor: "#FFEAD7" }}>
-                  <img 
+                  <SafeImage 
                     src={imageSrc} 
                     alt={ad.title}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600";
-                    }}
                   />
                 </Link>
 
