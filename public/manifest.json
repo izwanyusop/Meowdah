@@ -1,0 +1,24 @@
+{
+  "name": "Meowdah.my - Marketplace Kucing Terbaik Malaysia",
+  "short_name": "Meowdah",
+  "description": "Mudah Cari Jodoh, Barangan, & Keperluan Si Bulus Oyen Kesayangan Anda!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F3",
+  "theme_color": "#FF8C32",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
