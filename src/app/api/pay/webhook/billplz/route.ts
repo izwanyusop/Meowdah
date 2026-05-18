@@ -1,13 +1,10 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { createAdminClient } from '@/utils/supabase/admin'
 import crypto from 'crypto'
 
 // Helper function to update Ad boost status in DB
 async function activateBoost(adId: string, boostType: string) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )
+  const supabase = createAdminClient()
 
   let updateFields: any = {}
   if (boostType === 'featured') {
@@ -88,10 +85,7 @@ export async function POST(request: Request) {
       const [adId, boostType] = reference.split(':')
       
       // Optional security signature verification
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      )
+      const supabase = createAdminClient()
 
       const { data: sigKeyData } = await supabase
         .from('system_settings')
