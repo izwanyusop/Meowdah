@@ -76,46 +76,50 @@ a {
   text-decoration: none;
 }
 
-/* Mobile-First Layout Wrapper: centers content and adapts to wider desktop screen beautifully */
+/* 100% Fluid Responsive Layout Container: spans seamlessly edge-to-edge on all screens */
 .app-container {
   width: 100%;
-  max-width: 480px; /* Standard premium mobile view width */
+  max-width: 100%; /* No narrow capping, 100% full bleed! */
   min-height: 100vh;
   background-color: #FFF8F3; /* Fallback */
   background-color: var(--color-bg);
-  box-shadow: 0 0 32px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto;
 }
 
 /* Media query for wider devices (desktop support) */
 @media (min-width: 768px) {
   body {
-    background-color: #F8ECE0; /* Soft contrast background for desktop */
-  }
-  .app-container {
-    max-width: 1024px; /* Expand to elegant spacious tablet/desktop width! */
-    box-shadow: 0 0 64px rgba(255, 140, 50, 0.08);
-    border-left: 1px solid #F3E9E1;
-    border-left: 1px solid var(--color-border);
-    border-right: 1px solid #F3E9E1;
-    border-right: 1px solid var(--color-border);
+    background-color: var(--color-bg); /* Clean consistent cream background */
   }
 }
 
-/* Responsive Grid Utility for Ads */
+/* Fluid Responsive Grid Utility for Ads */
 .ads-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+  .ads-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
   .ads-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .ads-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
   }
 }
 
