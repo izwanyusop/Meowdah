@@ -123,6 +123,7 @@ CREATE TABLE profiles (
   city TEXT,
   is_admin BOOLEAN DEFAULT FALSE,
   is_verified_breeder BOOLEAN DEFAULT FALSE,
+  email TEXT,
   store_slug TEXT UNIQUE,
   store_banner TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL

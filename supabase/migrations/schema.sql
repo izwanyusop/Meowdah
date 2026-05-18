@@ -23,6 +23,7 @@ create table public.profiles (
     avatar_url text,
     is_verified_breeder boolean default false not null,
     is_admin boolean default false not null,
+    email text,
     
     -- Kedai/Pro Niaga Details
     store_name text,
@@ -193,7 +194,8 @@ begin
     full_name,
     avatar_url,
     is_admin,
-    is_verified_breeder
+    is_verified_breeder,
+    email
   )
   values (
     new.id,
@@ -201,7 +203,8 @@ begin
     coalesce(new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'name', split_part(new.email, '@', 1)),
     new.raw_user_meta_data->>'avatar_url',
     false, -- Admin dimatikan secara lalai demi keselamatan
-    false  -- Verified breeder dimatikan secara lalai
+    false,  -- Verified breeder dimatikan secara lalai
+    new.email
   );
   
   return new;
