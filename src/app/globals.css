@@ -76,7 +76,7 @@ a {
   text-decoration: none;
 }
 
-/* Mobile-First Layout Wrapper: centers content and mimics a native mobile app view on desktop */
+/* Mobile-First Layout Wrapper: centers content and adapts to wider desktop screen beautifully */
 .app-container {
   width: 100%;
   max-width: 480px; /* Standard premium mobile view width */
@@ -87,6 +87,7 @@ a {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 0 auto;
 }
 
 /* Media query for wider devices (desktop support) */
@@ -95,11 +96,26 @@ a {
     background-color: #F8ECE0; /* Soft contrast background for desktop */
   }
   .app-container {
+    max-width: 1024px; /* Expand to elegant spacious tablet/desktop width! */
     box-shadow: 0 0 64px rgba(255, 140, 50, 0.08);
     border-left: 1px solid #F3E9E1;
     border-left: 1px solid var(--color-border);
     border-right: 1px solid #F3E9E1;
     border-right: 1px solid var(--color-border);
+  }
+}
+
+/* Responsive Grid Utility for Ads */
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .ads-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 }
 

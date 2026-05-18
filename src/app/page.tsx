@@ -524,7 +524,7 @@ export default async function Home() {
           Iklan Terkini (Bilus Baru)
         </h3>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+        <div className="ads-grid">
           {recentAds.map((ad, idx) => {
             const imageSrc = ad.images && ad.images.length > 0 ? ad.images[0] : "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600";
             return (
